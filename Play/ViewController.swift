@@ -10,10 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var hiddenView: UIView!
     @IBOutlet weak var view1: UIView!
     @IBOutlet weak var view2: UIView!
     
-    let hiddenView = UIView()
     let animatedView = UIView()
     var flag = 0
     
@@ -46,7 +46,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.addSubview(hiddenView)
         animatedView.backgroundColor = .white
     }
     
@@ -55,7 +54,7 @@ class ViewController: UIViewController {
         hiddenView.addSubview(animatedView)
         animatedView.frame = hiddenView.bounds
         
-        UIView.animate(withDuration: 2, delay: 0.3, options: [.repeat, .autoreverse], animations: {
+        UIView.animate(withDuration: 1, delay: 0, options: [.repeat, .autoreverse], animations: {
             self.animatedView.backgroundColor = UIColor.random()
 
         }, completion: { _ in
