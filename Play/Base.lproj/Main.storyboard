@@ -14,9 +14,76 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78O-RP-1P8">
+                                <rect key="frame" x="168" y="324.5" width="78" height="76"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="60"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ky7-n3-h6e">
+                                <rect key="frame" x="111.5" y="522.5" width="191" height="42"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tnt-bV-Ghy">
+                                        <rect key="frame" x="0.0" y="0.0" width="66" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Minus"/>
+                                        <connections>
+                                            <action selector="onClickMinus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cjx-vM-RtS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8b-es-R4Y">
+                                        <rect key="frame" x="146" y="0.0" width="45" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Add"/>
+                                        <connections>
+                                            <action selector="onClickAdd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JXW-oM-LaI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="R8b-es-R4Y" firstAttribute="top" secondItem="Ky7-n3-h6e" secondAttribute="top" id="3ZU-af-mL0"/>
+                                    <constraint firstAttribute="bottom" secondItem="tnt-bV-Ghy" secondAttribute="bottom" id="EBX-g2-YDe"/>
+                                    <constraint firstItem="R8b-es-R4Y" firstAttribute="leading" secondItem="tnt-bV-Ghy" secondAttribute="trailing" constant="80" id="Qf9-yr-Yl4"/>
+                                    <constraint firstItem="tnt-bV-Ghy" firstAttribute="top" secondItem="Ky7-n3-h6e" secondAttribute="top" id="WVT-bE-aeA"/>
+                                    <constraint firstAttribute="trailing" secondItem="R8b-es-R4Y" secondAttribute="trailing" id="bzB-11-uuq"/>
+                                    <constraint firstItem="tnt-bV-Ghy" firstAttribute="leading" secondItem="Ky7-n3-h6e" secondAttribute="leading" id="nJt-AT-WqZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="R8b-es-R4Y" secondAttribute="bottom" id="qbn-Hw-PWR"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHH-XK-9KO">
+                                <rect key="frame" x="244" y="617.5" width="46" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Push"/>
+                                <connections>
+                                    <action selector="onClickType:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jim-ot-ffX"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CATransition Type : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9V-Gm-zBB">
+                                <rect key="frame" x="50" y="624.5" width="170" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="78O-RP-1P8" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.8" id="15Y-Ri-W9N"/>
+                            <constraint firstItem="78O-RP-1P8" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="3E2-hC-bzW"/>
+                            <constraint firstItem="aHH-XK-9KO" firstAttribute="leading" secondItem="E9V-Gm-zBB" secondAttribute="trailing" constant="24" id="6GC-uT-FRj"/>
+                            <constraint firstItem="E9V-Gm-zBB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="8CQ-ur-8vS"/>
+                            <constraint firstItem="Ky7-n3-h6e" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.2" id="IDy-CQ-jAH"/>
+                            <constraint firstItem="Ky7-n3-h6e" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fYy-uS-dCr"/>
+                            <constraint firstItem="E9V-Gm-zBB" firstAttribute="top" secondItem="Ky7-n3-h6e" secondAttribute="bottom" constant="60" id="jak-al-SST"/>
+                            <constraint firstItem="E9V-Gm-zBB" firstAttribute="centerY" secondItem="aHH-XK-9KO" secondAttribute="centerY" id="p4O-Qg-YjJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="btnType" destination="aHH-XK-9KO" id="mEY-QF-7z1"/>
+                        <outlet property="label" destination="78O-RP-1P8" id="wKd-g8-fxR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
