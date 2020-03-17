@@ -14,7 +14,30 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="Per-0e-Gar">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeJ-ui-j6t">
+                                <rect key="frame" x="147" y="773" width="120" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Show Dialog">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onClickShowDialog:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7vC-rc-hBE"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Per-0e-Gar" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Fuf-a0-Es3"/>
+                            <constraint firstItem="zeJ-ui-j6t" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Qnf-G5-hQv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zeJ-ui-j6t" secondAttribute="bottom" constant="50" id="W9d-yC-n3y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Per-0e-Gar" secondAttribute="trailing" id="bFg-OR-rhw"/>
+                            <constraint firstItem="Per-0e-Gar" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mij-Fl-dT9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Per-0e-Gar" secondAttribute="bottom" id="rwj-Ja-Q2m"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -23,4 +46,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="135.9375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="wallpaper" width="1242" height="2208"/>
+    </resources>
 </document>

@@ -16,6 +16,9 @@
 		0A8639E62410A824003152C1 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8639E52410A824003152C1 /* UIColor+Ext.swift */; };
 		0AA6D68F241F690F00DDB65B /* DialogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA6D68D241F690F00DDB65B /* DialogVC.swift */; };
 		0AA6D690241F690F00DDB65B /* DialogVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA6D68E241F690F00DDB65B /* DialogVC.xib */; };
+		0AA6D6A424206E1900DDB65B /* UIViewController+LSDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA6D69E24206E1900DDB65B /* UIViewController+LSDialogViewController.swift */; };
+		0AA6D6A524206E1900DDB65B /* LSAnimationUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA6D69F24206E1900DDB65B /* LSAnimationUtils.swift */; };
+		0AA6D6A624206E1900DDB65B /* LSDialogBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA6D6A024206E1900DDB65B /* LSDialogBackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		0A8639E52410A824003152C1 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		0AA6D68D241F690F00DDB65B /* DialogVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogVC.swift; sourceTree = "<group>"; };
 		0AA6D68E241F690F00DDB65B /* DialogVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DialogVC.xib; sourceTree = "<group>"; };
+		0AA6D69E24206E1900DDB65B /* UIViewController+LSDialogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+LSDialogViewController.swift"; sourceTree = "<group>"; };
+		0AA6D69F24206E1900DDB65B /* LSAnimationUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSAnimationUtils.swift; sourceTree = "<group>"; };
+		0AA6D6A024206E1900DDB65B /* LSDialogBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSDialogBackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +110,7 @@
 			children = (
 				0AA6D68D241F690F00DDB65B /* DialogVC.swift */,
 				0AA6D68E241F690F00DDB65B /* DialogVC.xib */,
+				0AA6D69B24206E1900DDB65B /* LSDialogViewController */,
 			);
 			path = "Other controllers";
 			sourceTree = "<group>";
@@ -114,6 +121,24 @@
 				0A8639E52410A824003152C1 /* UIColor+Ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0AA6D69B24206E1900DDB65B /* LSDialogViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0AA6D69C24206E1900DDB65B /* Classes */,
+			);
+			path = LSDialogViewController;
+			sourceTree = "<group>";
+		};
+		0AA6D69C24206E1900DDB65B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0AA6D69E24206E1900DDB65B /* UIViewController+LSDialogViewController.swift */,
+				0AA6D69F24206E1900DDB65B /* LSAnimationUtils.swift */,
+				0AA6D6A024206E1900DDB65B /* LSDialogBackgroundView.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,7 +214,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A8639D62410A796003152C1 /* ViewController.swift in Sources */,
+				0AA6D6A624206E1900DDB65B /* LSDialogBackgroundView.swift in Sources */,
+				0AA6D6A524206E1900DDB65B /* LSAnimationUtils.swift in Sources */,
 				0AA6D68F241F690F00DDB65B /* DialogVC.swift in Sources */,
+				0AA6D6A424206E1900DDB65B /* UIViewController+LSDialogViewController.swift in Sources */,
 				0A8639D22410A796003152C1 /* AppDelegate.swift in Sources */,
 				0A8639D42410A796003152C1 /* SceneDelegate.swift in Sources */,
 				0A8639E62410A824003152C1 /* UIColor+Ext.swift in Sources */,
