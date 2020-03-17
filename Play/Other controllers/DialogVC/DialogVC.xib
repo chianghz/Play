@@ -8,6 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DialogVC" customModule="Play" customModuleProvider="target">
             <connections>
+                <outlet property="lblTitle" destination="NHu-K4-VIj" id="35Z-Tl-AIG"/>
                 <outlet property="tableView" destination="Ygu-r1-kQD" id="IbJ-MN-CYR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

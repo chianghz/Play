@@ -15,11 +15,14 @@ class DialogTableViewCell: UITableViewCell {
     static let reuseIdentifier = "DialogTableViewCell"
     static let nib = UINib(nibName: "DialogTableViewCell", bundle: nil)
     
+    @IBOutlet weak var label: UILabel!
+    
     // UITableViewCell
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
+        // TODO: Custom your selected style
         contentView.backgroundColor = selected ? .systemOrange : .white
     }
     
