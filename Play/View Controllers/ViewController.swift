@@ -11,13 +11,14 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBAction func onClickShowDialog(_ sender: Any) {
+       
         let dialogVC = DialogVC(nibName: "DialogVC", bundle: nil)
-
-        presentDialogViewController(dialogVC)
-
-        dialogVC.onCloseDialog = { [weak self] in
-            self?.dismissDialogViewController()
-        }
+        
+        presentDialogViewController(dialogVC,
+                                    animationPattern: .zoomInOut,
+                                    backgroundViewType: .solid,
+                                    dismissButtonEnabled: true,
+                                    completion: nil)
     }
     
     override func viewDidLoad() {
