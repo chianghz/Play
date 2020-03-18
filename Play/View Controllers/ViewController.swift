@@ -10,10 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var selectedIndex: Int?
+    
     @IBAction func onClickShowDialog(_ sender: Any) {
        
         let options: [Any] = [1, 2, 0.5, "Play", [1,1]]
-        let dialogVC = DialogVC(title: "視窗標題", options: options)
+        let dialogVC = DialogVC(title: "視窗標題", options: options, selectedIndex: selectedIndex)
         dialogVC.titleTxtColor = UIColor.blue
         dialogVC.optionTxtColor = UIColor.brown
         
@@ -23,9 +25,8 @@ class ViewController: UIViewController {
                                     dismissButtonEnabled: true,
                                     completion: nil)
         
-        dialogVC.onSelectOption = { [weak self] option in
-            print(option)
-            
+        dialogVC.onSelectAtIndex = { [weak self] index in
+            self?.selectedIndex = index
             self?.dismissDialogViewController(.fadeInOut)
         }
     }

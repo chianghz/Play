@@ -30,6 +30,8 @@ extension DialogVC: UITableViewDataSource, UITableViewDelegate {
             cell.label.text = "[Unknown Type]"
         }
         
+        cell.separatorInset.left = (indexPath.row == options.count - 1) ? CGFloat.infinity : 0
+        
         return cell
     }
     
@@ -40,7 +42,7 @@ extension DialogVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        onSelectOption?(options[indexPath.row])
+        onSelectAtIndex?(indexPath.row)
     }
 
 }

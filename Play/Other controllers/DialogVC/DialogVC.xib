@@ -2,11 +2,12 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DialogVC" customModule="Play" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DialogVC" customModule="UniversalScore" customModuleProvider="target">
             <connections>
                 <outlet property="lblTitle" destination="NHu-K4-VIj" id="35Z-Tl-AIG"/>
                 <outlet property="tableView" destination="Ygu-r1-kQD" id="IbJ-MN-CYR"/>
@@ -46,7 +47,7 @@
                     <rect key="frame" x="0.0" y="44.5" width="292" height="168.5"/>
                     <subviews>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ygu-r1-kQD">
-                            <rect key="frame" x="26" y="5" width="240" height="163.5"/>
+                            <rect key="frame" x="26" y="5" width="240" height="158.5"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </tableView>
@@ -55,7 +56,7 @@
                     <constraints>
                         <constraint firstItem="Ygu-r1-kQD" firstAttribute="leading" secondItem="9tY-Iq-ZHb" secondAttribute="leading" constant="26" id="3GM-a3-Qj0"/>
                         <constraint firstItem="Ygu-r1-kQD" firstAttribute="top" secondItem="9tY-Iq-ZHb" secondAttribute="top" constant="5" id="5Cr-lX-gRo"/>
-                        <constraint firstAttribute="bottom" secondItem="Ygu-r1-kQD" secondAttribute="bottom" id="Mxz-QQ-3pz"/>
+                        <constraint firstAttribute="bottom" secondItem="Ygu-r1-kQD" secondAttribute="bottom" constant="5" id="Mxz-QQ-3pz"/>
                         <constraint firstAttribute="trailing" secondItem="Ygu-r1-kQD" secondAttribute="trailing" constant="26" id="PxP-8w-H2h"/>
                     </constraints>
                 </view>
