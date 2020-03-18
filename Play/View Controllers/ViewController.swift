@@ -14,10 +14,37 @@ class ViewController: UIViewController {
     
     @IBAction func onClickShowDialog(_ sender: Any) {
        
-        let options: [Any] = [1, 2, 0.5, "Play", [1,1]]
-        let dialogVC = DialogVC(title: "視窗標題", options: options, selectedIndex: selectedIndex)
+        let dialogVC = DialogVC(title: "視窗標題")
         dialogVC.titleTxtColor = UIColor.blue
         dialogVC.optionTxtColor = UIColor.brown
+        dialogVC.delegate = self
+        
+        let actions = [
+            DialogAction(title: "1", handler: { _ in
+                print("1")
+                self.selectedIndex = 0
+            }),
+            
+            DialogAction(title: "2", handler: { _ in
+                print("2")
+                self.selectedIndex = 1
+            }),
+            
+            DialogAction(title: "3", handler: {
+                _ in print("3")
+                self.selectedIndex = 2
+            }),
+            
+            DialogAction(title: "4", handler: { _ in
+                print("4")
+                self.selectedIndex = 3
+            })
+        ]
+        actions.forEach{ dialogVC.addAction($0) }
+        
+        if let index = selectedIndex {
+            dialogVC.setSelectedIndex(index)
+        }
         
         presentDialogViewController(dialogVC,
                                     animationPattern: .zoomInOut,
@@ -25,10 +52,6 @@ class ViewController: UIViewController {
                                     dismissButtonEnabled: true,
                                     completion: nil)
         
-        dialogVC.onSelectAtIndex = { [weak self] index in
-            self?.selectedIndex = index
-            self?.dismissDialogViewController(.fadeInOut)
-        }
     }
     
     override func viewDidLoad() {

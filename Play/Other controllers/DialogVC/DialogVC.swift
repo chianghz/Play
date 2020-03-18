@@ -15,21 +15,19 @@ class DialogVC: UIViewController {
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var tableView: UITableView!
         
+    var delegate: UIViewController?
     var titleTxtColor = UIColor(hexString: "#2F445E")
     var optionTxtColor = UIColor(hexString: "#373839")
-    var onSelectAtIndex: ((Int) -> Void)?
     
     private var myTitle: String?
-    private(set) var options = [Any]()
-    private var defaultIndex: Int?
+    private(set) var actions = [DialogAction]()
+    private var selectedIndex: Int?
     
     // Initialization
         
-    init(title: String, options: [Any], selectedIndex: Int?) {
+    init(title: String) {
         super.init(nibName: "DialogVC", bundle: nil)
         self.myTitle = title
-        self.options = options
-        self.defaultIndex = selectedIndex
     }
     
     required init?(coder: NSCoder) {
@@ -68,10 +66,20 @@ class DialogVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
        
-        if let index = defaultIndex {
+        if let index = selectedIndex {
             let indexPath = IndexPath(item: index, section: 0)
-            tableView.selectRow(at: indexPath, animated: true, scrollPosition: .middle)
+            tableView.selectRow(at: indexPath, animated: false, scrollPosition: .middle)
         }
+    }
+    
+    // Fuctions
+    
+    public func setSelectedIndex(_ index: Int) {
+        selectedIndex = index
+    }
+    
+    public func addAction(_ action: DialogAction) {
+        actions.append(action)
     }
     
 }

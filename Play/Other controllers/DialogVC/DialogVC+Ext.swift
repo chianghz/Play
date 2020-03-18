@@ -13,25 +13,16 @@ extension DialogVC: UITableViewDataSource, UITableViewDelegate {
     // MARK: UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return options.count
+        return actions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: DialogTableViewCell.reuseIdentifier, for: indexPath) as! DialogTableViewCell
         
         cell.label.textColor = optionTxtColor
+        cell.label.text = actions[indexPath.row].title
         
-        let option = options[indexPath.row]
-        if option is String {
-            cell.label.text = option as? String
-        } else if option is Int || option is Double {
-            cell.label.text = "\(option)"
-        } else {
-            cell.label.text = "[Unknown Type]"
-        }
-        
-        cell.separatorInset.left = (indexPath.row == options.count - 1) ? CGFloat.infinity : 0
-        
+        cell.separatorInset.left = (indexPath.row == actions.count - 1) ? CGFloat.infinity : 0
         return cell
     }
     
@@ -42,7 +33,12 @@ extension DialogVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        onSelectAtIndex?(indexPath.row)
+        let action = actions[indexPath.row]
+        action.handler?(action)
+        
+        if action.shallDismissDialog {
+            delegate?.dismissDialogViewController(.fadeInOut)
+        }
     }
 
 }
