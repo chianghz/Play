@@ -34,11 +34,10 @@ extension DialogVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let action = actions[indexPath.row]
-        action.handler?(action)
-        
         if action.shallDismissDialog {
             delegate?.dismissDialogViewController(.fadeInOut)
         }
+        action.handler?(action)
     }
 
 }
