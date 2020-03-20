@@ -14,7 +14,21 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nQM-iL-ggZ" customClass="InformationView" customModule="Play" customModuleProvider="target">
+                                <rect key="frame" x="82" y="328" width="250" height="250"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="Bdr-jp-VCA"/>
+                                    <constraint firstAttribute="height" constant="250" id="wfM-Fb-3es"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nQM-iL-ggZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="8cu-ZF-g05"/>
+                            <constraint firstItem="nQM-iL-ggZ" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="b3u-9N-dje"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>

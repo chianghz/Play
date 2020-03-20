@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A5A39D12425049700DF8151 /* InformationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A5A39D02425049700DF8151 /* InformationView.xib */; };
+		0A5A39D3242504A500DF8151 /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5A39D2242504A500DF8151 /* InformationView.swift */; };
 		0A8639D22410A796003152C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8639D12410A796003152C1 /* AppDelegate.swift */; };
 		0A8639D42410A796003152C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8639D32410A796003152C1 /* SceneDelegate.swift */; };
 		0A8639D62410A796003152C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8639D52410A796003152C1 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A5A39D02425049700DF8151 /* InformationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationView.xib; sourceTree = "<group>"; };
+		0A5A39D2242504A500DF8151 /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
 		0A8639CE2410A796003152C1 /* Play.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Play.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A8639D12410A796003152C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A8639D32410A796003152C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +86,8 @@
 		0AA6D694241F6B7900DDB65B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0A5A39D2242504A500DF8151 /* InformationView.swift */,
+				0A5A39D02425049700DF8151 /* InformationView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -166,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A8639DE2410A797003152C1 /* LaunchScreen.storyboard in Resources */,
+				0A5A39D12425049700DF8151 /* InformationView.xib in Resources */,
 				0A8639DB2410A797003152C1 /* Assets.xcassets in Resources */,
 				0A8639D92410A796003152C1 /* Main.storyboard in Resources */,
 			);
@@ -179,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A8639D62410A796003152C1 /* ViewController.swift in Sources */,
+				0A5A39D3242504A500DF8151 /* InformationView.swift in Sources */,
 				0A8639D22410A796003152C1 /* AppDelegate.swift in Sources */,
 				0A8639D42410A796003152C1 /* SceneDelegate.swift in Sources */,
 			);
