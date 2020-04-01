@@ -11,7 +11,13 @@ import UIKit
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
+        super.viewDidLoad()
         
+        let rect = CGRect(x: 0, y: 0, width: 300, height: 300)
+        let circleView = CircleView(frame: rect, borderWidth: 20, primaryNumber: 3, secondaryNumber: 1)
+        
+        view.addSubview(circleView)
+        circleView.center = view.center
     }
     
 }
