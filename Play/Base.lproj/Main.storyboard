@@ -14,9 +14,35 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="WXM-Q3-zMy">
+                                <rect key="frame" x="38" y="64" width="298" height="31"/>
+                                <connections>
+                                    <action selector="onSliderDragged:" destination="BYZ-38-t0r" eventType="valueChanged" id="id9-NQ-qrx"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uCc-fq-Kle">
+                                <rect key="frame" x="354" y="68.5" width="40" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WXM-Q3-zMy" secondAttribute="trailing" constant="80" id="6jn-Vj-0yw"/>
+                            <constraint firstItem="uCc-fq-Kle" firstAttribute="leading" secondItem="WXM-Q3-zMy" secondAttribute="trailing" constant="20" id="Ixq-7X-X0b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uCc-fq-Kle" secondAttribute="trailing" constant="20" id="KV0-Wp-xEq"/>
+                            <constraint firstItem="WXM-Q3-zMy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="R7G-2T-iAq"/>
+                            <constraint firstItem="WXM-Q3-zMy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="kLv-H5-aBv"/>
+                            <constraint firstItem="uCc-fq-Kle" firstAttribute="centerY" secondItem="WXM-Q3-zMy" secondAttribute="centerY" id="yvq-Y0-bNZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="myLabel" destination="uCc-fq-Kle" id="WSj-Wl-gTd"/>
+                        <outlet property="mySlider" destination="WXM-Q3-zMy" id="ta7-Vi-5al"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
