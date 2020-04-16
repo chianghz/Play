@@ -16,13 +16,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QBN-B0-eA7">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="749"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="euy-Rq-cSf">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="749"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallpaper_1" translatesAutoresizingMaskIntoConstraints="NO" id="erf-aj-BO8">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="erf-aj-BO8">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="749"/>
                                             </imageView>
                                         </subviews>
                                         <constraints>
@@ -35,30 +35,17 @@
                                         </constraints>
                                     </scrollView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gzz-fF-Jiq">
-                                        <rect key="frame" x="87" y="166.5" width="240" height="240"/>
+                                        <rect key="frame" x="87" y="142" width="240" height="240"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Gzz-fF-Jiq" secondAttribute="height" multiplier="1:1" id="heE-dP-fXM"/>
                                             <constraint firstAttribute="width" constant="240" id="w4k-eH-ODT"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cvc-Am-oIR">
-                                        <rect key="frame" x="183.5" y="699" width="47" height="39"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <state key="normal" title="Crop">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="onClickBtnCrop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vg9-iv-d52"/>
-                                            <segue destination="Inx-Y7-c2c" kind="show" identifier="mySegue" id="2Km-57-WNL"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstItem="Gzz-fF-Jiq" firstAttribute="centerY" secondItem="QBN-B0-eA7" secondAttribute="centerY" multiplier="0.7" id="14i-et-BQq"/>
-                                    <constraint firstAttribute="bottom" secondItem="Cvc-Am-oIR" secondAttribute="bottom" constant="80" id="FJQ-h0-N7V"/>
-                                    <constraint firstItem="Cvc-Am-oIR" firstAttribute="centerX" secondItem="QBN-B0-eA7" secondAttribute="centerX" id="Gfa-Hl-uWa"/>
                                     <constraint firstAttribute="trailing" secondItem="euy-Rq-cSf" secondAttribute="trailing" id="Hhf-NI-6Nw"/>
                                     <constraint firstAttribute="bottom" secondItem="euy-Rq-cSf" secondAttribute="bottom" id="JWK-6z-MkN"/>
                                     <constraint firstItem="euy-Rq-cSf" firstAttribute="top" secondItem="QBN-B0-eA7" secondAttribute="top" id="TON-Pm-JXi"/>
@@ -66,18 +53,54 @@
                                     <constraint firstItem="euy-Rq-cSf" firstAttribute="leading" secondItem="QBN-B0-eA7" secondAttribute="leading" id="xbs-gf-39E"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4sF-4F-3Hd">
+                                <rect key="frame" x="0.0" y="793" width="414" height="69"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cvc-Am-oIR">
+                                        <rect key="frame" x="326" y="15" width="48" height="39"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                        <state key="normal" title="Crop">
+                                            <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onClickBtnCrop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vg9-iv-d52"/>
+                                            <segue destination="Inx-Y7-c2c" kind="show" identifier="mySegue" id="2Km-57-WNL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Uf-lM-jXV">
+                                        <rect key="frame" x="40" y="15" width="70" height="39"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                        <state key="normal" title="Gallery">
+                                            <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onClickBtnChoose:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eDZ-06-cIb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="6Uf-lM-jXV" firstAttribute="leading" secondItem="4sF-4F-3Hd" secondAttribute="leading" constant="40" id="84V-Uw-bnW"/>
+                                    <constraint firstAttribute="height" constant="69" id="IGm-Z5-Bfd"/>
+                                    <constraint firstItem="6Uf-lM-jXV" firstAttribute="centerY" secondItem="4sF-4F-3Hd" secondAttribute="centerY" id="UZh-PA-xpn"/>
+                                    <constraint firstItem="Cvc-Am-oIR" firstAttribute="centerY" secondItem="4sF-4F-3Hd" secondAttribute="centerY" id="itx-Uf-6f6"/>
+                                    <constraint firstAttribute="trailing" secondItem="Cvc-Am-oIR" secondAttribute="trailing" constant="40" id="v6g-js-PLH"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QBN-B0-eA7" secondAttribute="trailing" id="7Gg-RS-Tga"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QBN-B0-eA7" secondAttribute="bottom" id="8O3-iK-Owe"/>
+                            <constraint firstItem="4sF-4F-3Hd" firstAttribute="top" secondItem="QBN-B0-eA7" secondAttribute="bottom" id="QDt-ld-n7P"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4sF-4F-3Hd" secondAttribute="trailing" id="aId-SE-fk6"/>
+                            <constraint firstItem="4sF-4F-3Hd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aQ4-70-FN8"/>
                             <constraint firstItem="QBN-B0-eA7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lo5-Yn-TiR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4sF-4F-3Hd" secondAttribute="bottom" id="pS4-v6-ams"/>
                             <constraint firstItem="QBN-B0-eA7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pX8-43-7xp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="btnCrop" destination="Cvc-Am-oIR" id="7cw-rd-MRj"/>
                         <outlet property="containerView" destination="QBN-B0-eA7" id="BbB-kq-mMT"/>
                         <outlet property="cropAreaView" destination="Gzz-fF-Jiq" id="rme-6L-BSW"/>
                         <outlet property="imgView" destination="erf-aj-BO8" id="xCH-tw-zH9"/>
@@ -105,7 +128,4 @@
             <point key="canvasLocation" x="933" y="136"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="wallpaper_1" width="675" height="1199"/>
-    </resources>
 </document>

@@ -22,9 +22,9 @@ class MyHoleView: UIView {
         super.layoutSubviews()
         
         // Blur View
-        blurView.frame.size = CGSize(width: frame.width, height: frame.height)
-        addSubview(blurView)
-//        self.backgroundColor = UIColor.darkGray.withAlphaComponent(0.5)
+//        blurView.frame.size = CGSize(width: frame.width, height: frame.height)
+//        addSubview(blurView)
+        self.backgroundColor = UIColor.init(white: 1, alpha: 0.5)
         
         // 製作中空 mask
         let path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: frame.width, height: frame.height))

@@ -11,16 +11,16 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    // Properties
+    // MARK: Properties
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var cropAreaView: UIView!
-    @IBOutlet weak var btnCrop: UIButton!
     
     private let holeView = MyHoleView()
-
+    private let imagePicker = UIImagePickerController()
+    
     var cropArea: CGRect {
         get {
             let factor = imgView.image!.size.width/view.frame.width
@@ -34,11 +34,13 @@ class ViewController: UIViewController {
         }
     }
     
-    // UIViewController
+    // MARK: UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
+        imagePicker.delegate = self
+
         scrollView.delegate = self
         scrollView.minimumZoomScale = 1.0
         scrollView.maximumZoomScale = 10.0
@@ -46,7 +48,7 @@ class ViewController: UIViewController {
         cropAreaView.backgroundColor = .clear
         cropAreaView.isUserInteractionEnabled = false
         
-        containerView.insertSubview(holeView, belowSubview: btnCrop)
+        containerView.addSubview(holeView)
         holeView.translatesAutoresizingMaskIntoConstraints = false
         [holeView.topAnchor.constraint(equalTo: containerView.topAnchor),
          holeView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
@@ -71,7 +73,13 @@ class ViewController: UIViewController {
         }
     }
     
-    // Actions
+    // MARK: Actions
+    
+    @IBAction func onClickBtnChoose(_ sender: Any) {
+        imagePicker.sourceType = .photoLibrary
+//        imagePicker.allowsEditing = true
+        present(imagePicker, animated: true, completion: nil)
+    }
     
     @IBAction func onClickBtnCrop(_ sender: Any) {
         performSegue(withIdentifier: "mySegue", sender: nil)
@@ -79,12 +87,20 @@ class ViewController: UIViewController {
     
 }
 
-extension ViewController: UIScrollViewDelegate {
+extension ViewController: UIScrollViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    // UIScrollViewDelegate
+    // MARK: - UIScrollViewDelegate
     
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return imgView
+    }
+    
+    // MARK: UIImagePickerControllerDelegate
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+//        imgView.image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
+        imgView.image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+        picker.dismiss(animated: true, completion: nil)
     }
     
 }
