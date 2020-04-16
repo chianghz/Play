@@ -21,7 +21,7 @@
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="euy-Rq-cSf">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallpaper_fuji" translatesAutoresizingMaskIntoConstraints="NO" id="erf-aj-BO8">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallpaper_1" translatesAutoresizingMaskIntoConstraints="NO" id="erf-aj-BO8">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                                             </imageView>
                                         </subviews>
@@ -34,17 +34,20 @@
                                             <constraint firstAttribute="bottom" secondItem="erf-aj-BO8" secondAttribute="bottom" id="obD-u0-KkR"/>
                                         </constraints>
                                     </scrollView>
-                                    <view opaque="NO" userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AWw-yG-s2P">
-                                        <rect key="frame" x="107" y="309" width="200" height="200"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gzz-fF-Jiq">
+                                        <rect key="frame" x="87" y="166.5" width="240" height="240"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="5a9-vF-Tfo"/>
-                                            <constraint firstAttribute="width" secondItem="AWw-yG-s2P" secondAttribute="height" multiplier="1:1" id="ebY-mD-jpZ"/>
+                                            <constraint firstAttribute="width" secondItem="Gzz-fF-Jiq" secondAttribute="height" multiplier="1:1" id="heE-dP-fXM"/>
+                                            <constraint firstAttribute="width" constant="240" id="w4k-eH-ODT"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cvc-Am-oIR">
-                                        <rect key="frame" x="190" y="738" width="34" height="30"/>
-                                        <state key="normal" title="Crop"/>
+                                        <rect key="frame" x="183.5" y="699" width="47" height="39"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="Crop">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="onClickBtnCrop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vg9-iv-d52"/>
                                             <segue destination="Inx-Y7-c2c" kind="show" identifier="mySegue" id="2Km-57-WNL"/>
@@ -53,14 +56,14 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
+                                    <constraint firstItem="Gzz-fF-Jiq" firstAttribute="centerY" secondItem="QBN-B0-eA7" secondAttribute="centerY" multiplier="0.7" id="14i-et-BQq"/>
+                                    <constraint firstAttribute="bottom" secondItem="Cvc-Am-oIR" secondAttribute="bottom" constant="80" id="FJQ-h0-N7V"/>
+                                    <constraint firstItem="Cvc-Am-oIR" firstAttribute="centerX" secondItem="QBN-B0-eA7" secondAttribute="centerX" id="Gfa-Hl-uWa"/>
                                     <constraint firstAttribute="trailing" secondItem="euy-Rq-cSf" secondAttribute="trailing" id="Hhf-NI-6Nw"/>
                                     <constraint firstAttribute="bottom" secondItem="euy-Rq-cSf" secondAttribute="bottom" id="JWK-6z-MkN"/>
-                                    <constraint firstItem="AWw-yG-s2P" firstAttribute="centerY" secondItem="QBN-B0-eA7" secondAttribute="centerY" id="Ml6-Nt-9K1"/>
                                     <constraint firstItem="euy-Rq-cSf" firstAttribute="top" secondItem="QBN-B0-eA7" secondAttribute="top" id="TON-Pm-JXi"/>
-                                    <constraint firstAttribute="bottom" secondItem="Cvc-Am-oIR" secondAttribute="bottom" constant="50" id="tGx-SL-PsT"/>
-                                    <constraint firstItem="Cvc-Am-oIR" firstAttribute="centerX" secondItem="QBN-B0-eA7" secondAttribute="centerX" id="vfD-Rq-uzz"/>
+                                    <constraint firstItem="Gzz-fF-Jiq" firstAttribute="centerX" secondItem="QBN-B0-eA7" secondAttribute="centerX" id="t1D-Tq-0Ni"/>
                                     <constraint firstItem="euy-Rq-cSf" firstAttribute="leading" secondItem="QBN-B0-eA7" secondAttribute="leading" id="xbs-gf-39E"/>
-                                    <constraint firstItem="AWw-yG-s2P" firstAttribute="centerX" secondItem="QBN-B0-eA7" secondAttribute="centerX" id="zaL-dU-T2J"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -74,7 +77,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="cropAreaView" destination="AWw-yG-s2P" id="avy-Nk-aCP"/>
+                        <outlet property="btnCrop" destination="Cvc-Am-oIR" id="7cw-rd-MRj"/>
+                        <outlet property="containerView" destination="QBN-B0-eA7" id="BbB-kq-mMT"/>
+                        <outlet property="cropAreaView" destination="Gzz-fF-Jiq" id="rme-6L-BSW"/>
                         <outlet property="imgView" destination="erf-aj-BO8" id="xCH-tw-zH9"/>
                         <outlet property="scrollView" destination="euy-Rq-cSf" id="Tlp-Ln-x8J"/>
                     </connections>
@@ -90,26 +95,10 @@
                     <view key="view" contentMode="scaleToFill" id="r5d-Bm-Knr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g22-6f-002">
-                                <rect key="frame" x="107" y="304" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="3bK-BS-9Or"/>
-                                    <constraint firstAttribute="width" secondItem="g22-6f-002" secondAttribute="height" multiplier="1:1" id="RzU-4S-Tgp"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="g22-6f-002" firstAttribute="centerY" secondItem="9xb-ji-63W" secondAttribute="centerY" id="0L7-BE-bjQ"/>
-                            <constraint firstItem="g22-6f-002" firstAttribute="centerX" secondItem="9xb-ji-63W" secondAttribute="centerX" id="ads-x9-Qdu"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9xb-ji-63W"/>
                     </view>
                     <navigationItem key="navigationItem" id="ktH-3V-hcx"/>
-                    <connections>
-                        <outlet property="imgView" destination="g22-6f-002" id="iA7-Og-91S"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c8K-p7-SI7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -117,6 +106,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="wallpaper_fuji" width="2880" height="1800"/>
+        <image name="wallpaper_1" width="675" height="1199"/>
     </resources>
 </document>

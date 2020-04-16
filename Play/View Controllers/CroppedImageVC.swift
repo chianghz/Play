@@ -10,13 +10,15 @@ import UIKit
 
 class CroppedImageVC: UIViewController {
 
+    var frame: CGRect!
     var image: UIImage!
-    
-    @IBOutlet weak var imgView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let imgView = UIImageView(frame: frame)
+        view.addSubview(imgView)
+        imgView.contentMode = .scaleAspectFit
         imgView.image = image
     }
     

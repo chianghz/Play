@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0A3935E42447136700E36646 /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3935E32447136700E36646 /* UIImageView+Ext.swift */; };
 		0A3935E624471AC300E36646 /* CroppedImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3935E524471AC300E36646 /* CroppedImageVC.swift */; };
+		0A3935E8244808AC00E36646 /* MyHoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3935E7244808AC00E36646 /* MyHoleView.swift */; };
 		0A8639D22410A796003152C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8639D12410A796003152C1 /* AppDelegate.swift */; };
 		0A8639D42410A796003152C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8639D32410A796003152C1 /* SceneDelegate.swift */; };
 		0A8639D62410A796003152C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8639D52410A796003152C1 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		0A3935E32447136700E36646 /* UIImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
 		0A3935E524471AC300E36646 /* CroppedImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CroppedImageVC.swift; sourceTree = "<group>"; };
+		0A3935E7244808AC00E36646 /* MyHoleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyHoleView.swift; path = "Play/View Controllers/MyHoleView.swift"; sourceTree = SOURCE_ROOT; };
 		0A8639CE2410A796003152C1 /* Play.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Play.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A8639D12410A796003152C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A8639D32410A796003152C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 		0AA6D694241F6B7900DDB65B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0A3935E7244808AC00E36646 /* MyHoleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			files = (
 				0A3935E624471AC300E36646 /* CroppedImageVC.swift in Sources */,
 				0A3935E42447136700E36646 /* UIImageView+Ext.swift in Sources */,
+				0A3935E8244808AC00E36646 /* MyHoleView.swift in Sources */,
 				0A8639D62410A796003152C1 /* ViewController.swift in Sources */,
 				0A8639D22410A796003152C1 /* AppDelegate.swift in Sources */,
 				0A8639D42410A796003152C1 /* SceneDelegate.swift in Sources */,

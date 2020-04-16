@@ -13,12 +13,16 @@ class ViewController: UIViewController {
     
     // Properties
     
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var cropAreaView: UIView!
+    @IBOutlet weak var btnCrop: UIButton!
     
+    private let holeView = MyHoleView()
+
     var cropArea: CGRect {
-        get{
+        get {
             let factor = imgView.image!.size.width/view.frame.width
             let scale = 1/scrollView.zoomScale
             let imageFrame = imgView.imageFrame()
@@ -38,6 +42,23 @@ class ViewController: UIViewController {
         scrollView.delegate = self
         scrollView.minimumZoomScale = 1.0
         scrollView.maximumZoomScale = 10.0
+        
+        cropAreaView.backgroundColor = .clear
+        cropAreaView.isUserInteractionEnabled = false
+        
+        containerView.insertSubview(holeView, belowSubview: btnCrop)
+        holeView.translatesAutoresizingMaskIntoConstraints = false
+        [holeView.topAnchor.constraint(equalTo: containerView.topAnchor),
+         holeView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
+         holeView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+         holeView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor)
+            ].forEach { $0.isActive = true }
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        holeView.holeFrame = cropAreaView.frame
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -45,6 +66,7 @@ class ViewController: UIViewController {
             
             let croppedCGImage = imgView.image?.cgImage?.cropping(to: cropArea)
             let croppedImage = UIImage(cgImage: croppedCGImage!)
+            vc.frame = cropAreaView.frame
             vc.image = croppedImage
         }
     }
